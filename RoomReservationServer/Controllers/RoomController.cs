@@ -23,7 +23,7 @@ namespace RoomReservationServer.Controllers
         {
             try
             {
-                var rooms = _repository.Room.GetAllRooms().ToList();
+                var rooms = _repository.Room.GetAllRooms();
                 _logger.LogInfo($"Returned all rooms from database.");
                 return Ok(rooms);
             }
